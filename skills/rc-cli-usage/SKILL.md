@@ -12,6 +12,7 @@ Use this skill when you need the correct `rc` command syntax, flag combinations,
 - Install: `brew tap AndroidPoet/tap && brew install revenuecat-cli`
 - Binary name: `revenuecat-cli` (alias: `rc`)
 - Auth configured: `rc doctor` passes
+- Get API key: https://app.revenuecat.com/settings/api-keys
 
 ## Global flags
 
@@ -48,6 +49,26 @@ rc products list --limit 50                    # First 50 results
 rc products list --starting-after prod_xxx     # Next page
 rc products list --all                         # All pages automatically
 ```
+
+## Dynamic shell completion
+
+Tab-complete resource IDs by querying the API live:
+
+```bash
+rc apps get --app-id <TAB>                     # Lists your app IDs
+rc products get --product-id <TAB>             # Lists your product IDs
+rc entitlements get --entitlement-id <TAB>     # Lists your entitlement IDs
+rc offerings get --offering-id <TAB>           # Lists your offering IDs
+```
+
+## Colored output
+
+Output uses ANSI colors automatically:
+- Green checkmark (✓) for success messages
+- Cyan for info messages
+- Red (✗) for errors
+- Yellow (⚠) for warnings
+- Bold for table headers
 
 ## Environment variables
 

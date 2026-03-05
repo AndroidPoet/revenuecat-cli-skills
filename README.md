@@ -51,11 +51,30 @@ Create and manage paywall configurations for offerings.
 
 ### rc-metrics
 
-View subscription metrics — MRR, active subscribers, trials, and revenue.
+View subscription metrics, project status dashboard, and live-updating metrics watch.
 
 **Use when:**
-- You need a quick overview of subscription health
+- You need a quick overview of subscription health (`rc status`)
 - You're checking MRR or active subscriber counts
+- You want to monitor metrics in real-time (`rc watch metrics`)
+
+### rc-report
+
+Generate full project reports as PDF, HTML, JSON, or YAML — including metrics, apps, products, entitlements, offerings, and packages.
+
+**Use when:**
+- You need a downloadable PDF or HTML report of project data
+- You want machine-readable export (JSON/YAML) for processing
+- You're creating a project summary for stakeholders
+
+### rc-project-ops
+
+Project operations — diff between projects, export/import configurations, and manage multiple projects.
+
+**Use when:**
+- You need to compare staging vs production (`rc diff`)
+- You're migrating config between projects (`rc export` / `rc import`)
+- You want to back up your RevenueCat configuration as YAML
 
 ### rc-integrations
 
